@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="input">
+
+<button onclick="search()">Search</button>
+
+<p id="result"></p>
+
+<script>
+
+    let arrEn = ['car', 'bike', 'motorbike', 'bus'];
+
+    let arrVN = ['Oto', 'Xe đạp', 'Xe máy', 'Xe buýt'];
+
+
+    function search() {
+        let input = document.getElementById('input').value;
+
+        if(arrEn.indexOf(input.toLowerCase()) !== -1){
+            document.getElementById('result').innerText = arrVN[arrEn.indexOf(input.toLowerCase())];
+        } else {
+            document.getElementById('result').innerText = 'Không tìm thấy';
+        }
+    }
+
+</script>
+
+</body>
+</html>
